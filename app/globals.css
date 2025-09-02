@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    /* Updated to dark purple space theme inspired by Eclipse Tools */
+    --background: 240 10% 3.9%;
+    --foreground: 280 20% 85%;
+    --card: 260 15% 8%;
+    --card-foreground: 280 20% 85%;
+    --popover: 260 15% 8%;
+    --popover-foreground: 280 20% 85%;
+    --primary: 270 91% 65%;
+    --primary-foreground: 240 10% 3.9%;
+    --secondary: 260 15% 12%;
+    --secondary-foreground: 280 20% 85%;
+    --muted: 260 15% 12%;
+    --muted-foreground: 280 10% 60%;
+    --accent: 285 85% 70%;
+    --accent-foreground: 240 10% 3.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 260 15% 15%;
+    --input: 260 15% 8%;
+    --ring: 270 91% 65%;
+    --chart-1: 270 91% 65%;
+    --chart-2: 285 85% 70%;
+    --chart-3: 280 20% 85%;
+    --chart-4: 280 10% 60%;
+    --chart-5: 24 70% 52%;
+    --radius: 0.75rem;
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 280 20% 85%;
+    --sidebar-primary: 260 15% 12%;
+    --sidebar-primary-foreground: 280 20% 85%;
+    --sidebar-accent: 285 85% 70%;
+    --sidebar-accent-foreground: 240 10% 3.9%;
+    --sidebar-border: 260 15% 15%;
+    --sidebar-ring: 270 91% 65%;
+  }
+  .dark {
+    /* Dark mode uses same colors as light mode for consistent dark theme */
+    --background: 240 10% 3.9%;
+    --foreground: 280 20% 85%;
+    --card: 260 15% 8%;
+    --card-foreground: 280 20% 85%;
+    --popover: 260 15% 8%;
+    --popover-foreground: 280 20% 85%;
+    --primary: 270 91% 65%;
+    --primary-foreground: 240 10% 3.9%;
+    --secondary: 260 15% 12%;
+    --secondary-foreground: 280 20% 85%;
+    --muted: 260 15% 12%;
+    --muted-foreground: 280 10% 60%;
+    --accent: 285 85% 70%;
+    --accent-foreground: 240 10% 3.9%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 260 15% 15%;
+    --input: 260 15% 8%;
+    --ring: 270 91% 65%;
+    --chart-1: 270 91% 65%;
+    --chart-2: 285 85% 70%;
+    --chart-3: 280 20% 85%;
+    --chart-4: 280 10% 60%;
+    --chart-5: 24 70% 52%;
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 280 20% 85%;
+    --sidebar-primary: 260 15% 12%;
+    --sidebar-primary-foreground: 280 20% 85%;
+    --sidebar-accent: 285 85% 70%;
+    --sidebar-accent-foreground: 240 10% 3.9%;
+    --sidebar-border: 260 15% 15%;
+    --sidebar-ring: 270 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    /* Added starry background pattern */
+    background-image: radial-gradient(2px 2px at 20px 30px, #a855f7, transparent),
+      radial-gradient(2px 2px at 40px 70px, #c084fc, transparent),
+      radial-gradient(1px 1px at 90px 40px, #e879f9, transparent),
+      radial-gradient(1px 1px at 130px 80px, #a855f7, transparent),
+      radial-gradient(2px 2px at 160px 30px, #c084fc, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+  }
+}
+
+/* Updated gradient and glow effects for purple space theme */
+@layer components {
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-accent;
+  }
+
+  .gradient-card {
+    @apply bg-gradient-to-br from-card/80 to-secondary/60 backdrop-blur-sm;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 6px -1px rgba(168, 85, 247, 0.1), 0 2px 4px -1px rgba(168, 85, 247, 0.06);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.4), 0 0 60px rgba(192, 132, 252, 0.2);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Added space-themed animations and effects */
+  .space-card {
+    @apply bg-gradient-to-br from-purple-900/40 to-purple-800/20 backdrop-blur-md border border-purple-500/30 rounded-2xl;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .moon-glow {
+    filter: drop-shadow(0 0 20px rgba(192, 132, 252, 0.8));
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(168, 85, 247, 0.8);
+    }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
