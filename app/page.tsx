@@ -66,13 +66,59 @@ export default function Page() {
 
             {/* Bottom Text */}
             <div className="space-y-6">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-destructive text-balance">SEM ME PAGAR</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-destructive text-balance">
+                SEM PAGAR O VINI (
+                <a
+                  href="https://instagram.com/mzzvxm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-primary transition-colors duration-300 underline decoration-2 underline-offset-4"
+                >
+                  @mzzvxm
+                </a>
+                )
+              </h2>
               <p className="text-base md:text-lg text-muted-foreground font-medium">me paga aí caloteiro</p>
               <div className="modern-card p-6 md:p-8 pulse-glow">
                 <p className="text-lg md:text-xl font-semibold text-primary">
                   Valor da dívida: R$ {debtAmount.toFixed(2)}
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Sobre o Allan */}
+        <section className="py-24 px-6">
+          <div className="max-w-5xl mx-auto text-center space-y-12">
+            <div className="modern-card p-8 shadow-glow">
+              <h3 className="text-xl md:text-2xl font-bold text-gradient mb-6">
+                Ainda tem dúvidas de qual Allan estamos falando? 🤔
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-base max-w-3xl mx-auto">
+                Estamos falando do <strong className="text-primary">Allan Mattes Santiago</strong> (
+                <a
+                  href="https://instagram.com/santtxn_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-primary transition-colors duration-300"
+                >
+                  @santtxn_
+                </a>
+                ), estudante do <strong className="text-accent">3° ano do ensino médio</strong>, no
+                <strong className="text-primary"> Colégio Estadual Dr. Décio Dossi</strong>. Ele estuda no
+                <strong className="text-accent"> 3°A</strong>, no{" "}
+                <strong className="text-primary">turno da manhã</strong>, e está devendo o Vinicius (
+                <a
+                  href="https://instagram.com/mzzvxm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-primary transition-colors duration-300"
+                >
+                  @mzzvxm
+                </a>
+                ) e <strong className="text-destructive">tá dando o calote já</strong>! 😤
+              </p>
             </div>
           </div>
         </section>

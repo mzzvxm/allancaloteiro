@@ -117,7 +117,15 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: hsl(270, 91%, 65%); /* Fallback color for browsers that don't support background-clip */
+  }
+
+  /* Added support check for gradient text with fallback */
+  @supports not (-webkit-background-clip: text) {
+    .text-gradient {
+      color: hsl(270, 91%, 65%);
+      background: none;
+    }
   }
 
   .modern-card {
