@@ -41,8 +41,8 @@ export const DebtTimer = ({ startDate, isCompact = false }: DebtTimerProps) => {
 
   if (isCompact) {
     return (
-      <div className="flex items-center gap-2 gradient-primary px-4 py-2 rounded-xl shadow-glow">
-        <span className="text-sm font-bold text-primary-foreground">
+      <div className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg shadow-soft">
+        <span className="text-sm font-bold">
           {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
         </span>
       </div>
@@ -50,31 +50,25 @@ export const DebtTimer = ({ startDate, isCompact = false }: DebtTimerProps) => {
   }
 
   return (
-    <div className="grid grid-cols-4 gap-4 md:gap-6">
-      <div className="gradient-primary p-6 md:p-8 rounded-2xl shadow-glow text-center transform hover:scale-105 transition-all duration-300">
-        <div className="text-4xl md:text-6xl font-bold text-primary-foreground mb-2">{timeLeft.days}</div>
-        <div className="text-sm md:text-base font-semibold text-primary-foreground/90 uppercase tracking-wider">
-          Dias
-        </div>
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto">
+      <div className="bg-primary text-primary-foreground p-4 sm:p-6 md:p-8 rounded-lg shadow-soft text-center transform hover:scale-105 transition-all duration-300">
+        <div className="text-2xl sm:text-3xl md:text-5xl font-bold mb-1 sm:mb-2">{timeLeft.days}</div>
+        <div className="text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider opacity-90">Dias</div>
       </div>
 
-      <div className="gradient-primary p-6 md:p-8 rounded-2xl shadow-glow text-center transform hover:scale-105 transition-all duration-300">
-        <div className="text-4xl md:text-6xl font-bold text-primary-foreground mb-2">{timeLeft.hours}</div>
-        <div className="text-sm md:text-base font-semibold text-primary-foreground/90 uppercase tracking-wider">
-          Horas
-        </div>
+      <div className="bg-primary text-primary-foreground p-4 sm:p-6 md:p-8 rounded-lg shadow-soft text-center transform hover:scale-105 transition-all duration-300">
+        <div className="text-2xl sm:text-3xl md:text-5xl font-bold mb-1 sm:mb-2">{timeLeft.hours}</div>
+        <div className="text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider opacity-90">Horas</div>
       </div>
 
-      <div className="gradient-primary p-6 md:p-8 rounded-2xl shadow-glow text-center transform hover:scale-105 transition-all duration-300">
-        <div className="text-4xl md:text-6xl font-bold text-primary-foreground mb-2">{timeLeft.minutes}</div>
-        <div className="text-sm md:text-base font-semibold text-primary-foreground/90 uppercase tracking-wider">
-          Minutos
-        </div>
+      <div className="bg-primary text-primary-foreground p-4 sm:p-6 md:p-8 rounded-lg shadow-soft text-center transform hover:scale-105 transition-all duration-300">
+        <div className="text-2xl sm:text-3xl md:text-5xl font-bold mb-1 sm:mb-2">{timeLeft.minutes}</div>
+        <div className="text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider opacity-90">Minutos</div>
       </div>
 
-      <div className="gradient-primary p-6 md:p-8 rounded-2xl shadow-glow text-center transform hover:scale-105 transition-all duration-300 animate-pulse">
-        <div className="text-4xl md:text-6xl font-bold text-primary-foreground mb-2">{timeLeft.seconds}</div>
-        <div className="text-sm md:text-base font-semibold text-primary-foreground/90 uppercase tracking-wider">
+      <div className="bg-primary text-primary-foreground p-4 sm:p-6 md:p-8 rounded-lg shadow-soft text-center">
+        <div className="text-2xl sm:text-3xl md:text-5xl font-bold mb-1 sm:mb-2">{timeLeft.seconds}</div>
+        <div className="text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider opacity-90">
           Segundos
         </div>
       </div>
