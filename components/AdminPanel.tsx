@@ -22,8 +22,8 @@ export const AdminPanel = ({ currentAmount, isPaid, onUpdateAmount, onTogglePaid
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const { toast } = useToast()
 
-  const handleLogin = () => {
-    if (password === "vini123") {
+  const handleLogin = () => {   
+    if (password === "cu") {
       setIsAuthenticated(true)
       toast({
         title: "Acesso liberado!",
