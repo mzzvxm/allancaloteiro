@@ -138,7 +138,7 @@ export default function Page() {
 
             <div className="text-center">
               <p className="text-sm text-muted-foreground italic">
-                * Este site é uma brincadeira entre amigos. Allan, se você está vendo isso, você sabe o que fazer! 😄
+                * Este site não é uma brincadeira entre amigos. Allan, se você está vendo isso, me paga seu viadinho filho da puta. 😄
               </p>
             </div>
           </div>
