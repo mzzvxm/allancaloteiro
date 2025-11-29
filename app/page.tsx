@@ -37,6 +37,7 @@ export default function Page() {
             Allan finalmente pagou os R$ {debtAmount.toFixed(2)}!
           </p>
           <div className="modern-card p-8 pulse-glow">
+            <p className="text-lg font-semibold text-primary">DEPOIS DE 87 DIAS 13 HORAS E 37 MINUTOS!</p>
             <p className="text-lg font-semibold text-primary">🎊 Missão cumprida! 🎊</p>
           </div>
         </div>
